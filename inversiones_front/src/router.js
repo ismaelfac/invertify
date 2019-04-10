@@ -21,6 +21,11 @@ export default new Router({
           path: 'about',
           name: 'about',
           component: () => import('./views/WebSite/About.vue')
+        },
+        {
+          path: 'property',
+          name: 'property',
+          component: () => import('./components/shared/properties/DetailsPropertyHome.vue')
         }
       ]
     },

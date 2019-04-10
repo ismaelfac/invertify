@@ -97,8 +97,9 @@
           color="white"
           flat
           round
+          :to="link.link"
         >
-          {{ link }}
+          {{ link.title }}
         </v-btn>
         
       </v-layout>
@@ -114,12 +115,13 @@
         >
           <v-btn
             v-for="link in links"
-            :key="link"
+            :key="link.id"
             color="white"
             flat
             round
+            :to="link.link"
           >
-            {{ link }}
+            {{ link.title }}
           </v-btn>
           <v-flex
             primary
@@ -145,12 +147,12 @@
       roles: false,
       hints: true,
       links: [
-        { 'text':'Inicio', 'link': 'home'},
-        {'text':'Quienes Somos', 'link': 'home'},
-        {'text':'Marcas', 'link': 'home'},
-        {'text':'Propiedades', 'link': 'home'},
-        {'text':'Blog', 'link': 'home'},
-        {'text':'Contactenos', 'link': 'home'}
+        {'id': 1, 'title': 'Inicio', 'link':'/'},
+        {'id': 2, 'title': 'Quienes Somos', 'link':'about'},
+        {'id': 3, 'title': 'Marca', 'link':'brands'},
+        {'id': 4, 'title': 'Blog', 'link':'blog'},
+        {'id': 5, 'title': 'Inmobiliaria', 'link':'properties'},
+        {'id': 6, 'title': 'Contactenos', 'link':'contact'}
       ]
     })
   }

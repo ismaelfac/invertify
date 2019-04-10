@@ -28,13 +28,23 @@
       :value="'tab-' + i"
     >
       <v-card flat>
-        <v-card-text>{{ text }}</v-card-text>
+        <v-card-text>
+          <properties-list></properties-list>
+        </v-card-text>
       </v-card>
     </v-tab-item>
   </v-tabs>
 </template>
 <script>
+import store from '../../../store/index.js'
+import PropertiesList from '../properties/PropertyList'
   export default {
+    components: {
+      PropertiesList
+    },
+    computed: {
+
+    },
     data () {
       return {
         model: 'tab-1',

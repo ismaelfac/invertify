@@ -11,8 +11,8 @@
       <v-toolbar-side-icon></v-toolbar-side-icon>
       <v-toolbar-title>Clasificados</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>search</v-icon>
+      <v-btn icon><router-link to="/about">
+        <v-icon large color="write darken-2">chat</v-icon></router-link>
       </v-btn>
     </v-toolbar>
 
