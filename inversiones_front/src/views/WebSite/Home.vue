@@ -14,23 +14,15 @@
         <v-btn icon>
           <v-icon>refresh</v-icon>
         </v-btn>
-
-        <v-menu
-          v-model="menu"
-          :close-on-content-click="false"
-          :nudge-width="200"
-          offset-x
-        >
-          <template v-slot:activator="{ on }">
-            <v-btn
-              color="indigo"
-              dark
-              v-on="on"
-            >
-              Name User
+        <router-link to="/login"><h4>Inicio de Sessión |</h4></router-link>
+        <router-link to="/register"><h4> Registrarme</h4></router-link>
+        <v-menu v-model="menu" :close-on-content-click="false" :nudge-width="200" offset-x>        
+          <template  v-slot:activator="{ on }">
+            <v-btn color="indigo" dark v-on="on" v-if="user">
+              {{ fullname }}
             </v-btn>
+            
           </template>
-
           <v-card>
             <v-list>
               <v-list-tile avatar>
@@ -107,7 +99,7 @@
       <v-layout>
         <router-view></router-view>       
       </v-layout>
-      <v-footer height="auto" color="primary lighten-1">
+      <v-footer height="auto" color="primary">
         <v-layout
           justify-center
           row
@@ -142,6 +134,8 @@
   export default {
     data: () => ({
       fav: true,
+      user: false,
+      fullname: null,
       menu: false,
       message: false,
       roles: false,

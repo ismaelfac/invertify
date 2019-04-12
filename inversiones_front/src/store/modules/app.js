@@ -12,7 +12,7 @@ const state = {
         primary: '#151ea3',
         danger: '#e34a4a',
         info: '#4ab2e3',
-        success: '#db76df',
+        success: '#95c41f ',
         warning: '#f7cc36',
         white: '#fff',
         black: '#000',
